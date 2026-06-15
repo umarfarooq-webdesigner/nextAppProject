@@ -7,7 +7,15 @@ const JokeGenerator = () => {
   const [showJoke, setShowJoke] = useState(true);
 
   const getJoke = async () => {
-    const res = await fetch("https://official-joke-api.appspot.com/random_joke");
+    const res = await fetch(
+      "https://official-joke-api.appspot.com/random_joke",
+    );
+    console.log("https://official-joke-api.appspot.com/random_joke");
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch joke");
+    }
+
     const data = await res.json();
     setJoke(data);
     console.log(data);
@@ -27,16 +35,20 @@ const JokeGenerator = () => {
           <p className="py-2">{joke.setup}</p>
 
           {showJoke ? (
-            <button 
-            onClick={() => setShowJoke(false)} 
-            className="bg-amber-500 rounded capitalize text-white px-4 py-2 border-white border  shadow">reveal punchline</button>
+            <button
+              onClick={() => setShowJoke(false)}
+              className="bg-amber-500 rounded capitalize text-white px-4 py-2 border-white border  shadow"
+            >
+              reveal punchline
+            </button>
           ) : (
             <div>
               <p className="py-2 text-red-600">{joke.punchline}</p>
               <div>
-                <button 
-                onClick={() => setShowJoke(true)}
-                className="bg-amber-500 rounded capitalize text-white px-4 py-2 border-white border  shadow">
+                <button
+                  onClick={() => setShowJoke(true)}
+                  className="bg-amber-500 rounded capitalize text-white px-4 py-2 border-white border  shadow"
+                >
                   Hide punchline
                 </button>
               </div>
