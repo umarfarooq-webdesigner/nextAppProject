@@ -12,7 +12,7 @@ export default function name() {
 
   students.splice(1, 1);
 
-  console.log(students);
+  // console.log(students);
 
   return (
     <>

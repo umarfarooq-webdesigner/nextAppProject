@@ -2,8 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Demo3",
-}
-
+};
 
 const Demo3 = () => {
   return (
