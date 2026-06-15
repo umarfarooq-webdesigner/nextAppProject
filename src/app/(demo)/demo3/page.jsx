@@ -6,7 +6,7 @@ export const metadata = {
 
 const Demo3 = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-10">
+    <div className="flex flex-col justify-center items-center py-10 px-5 bg-gray-50">
       <h1>📅 Day 13 — Environment Variables (Next.js)</h1>
       <p>📚 Learn</p>
       <h2>1. What are Environment Variables?</h2>

@@ -11,7 +11,7 @@ const ServerComp = async () => {
 
   return (
     <>
-      <div className=" justify-center text-center items-center">
+      <div className=" justify-center text-center items-center ">
         <h1>Server Components Page</h1>
 
         <div className="my-5">
