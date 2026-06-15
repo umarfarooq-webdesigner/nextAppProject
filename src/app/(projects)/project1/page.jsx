@@ -10,7 +10,7 @@ const JokeGenerator = () => {
     const res = await fetch("http://official-joke-api.appspot.com/random_joke");
     const data = await res.json();
     setJoke(data);
-    // console.log(data);
+    console.log(data);
   };
   useEffect(() => {
     getJoke();
