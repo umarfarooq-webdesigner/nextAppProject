@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { FaSmileWink } from "react-icons/fa";
 
 const JokeGenerator = () => {
-  const [joke, setJoke] = useState([]);
+  const [joke, setJoke] = useState({});
   const [showJoke, setShowJoke] = useState(true);
 
   const getJoke = async () => {
-    const res = await fetch("http://official-joke-api.appspot.com/random_joke");
+    const res = await fetch("https://official-joke-api.appspot.com/random_joke");
     const data = await res.json();
     setJoke(data);
     console.log(data);
