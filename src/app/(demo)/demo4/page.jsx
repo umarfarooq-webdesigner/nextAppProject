@@ -7,7 +7,7 @@ const Demo4 = () => {
   return (
     <div className="grid justify-center items-center mt-10 px-10">
       <div className="flex flex-col justify-center items-center w-full lg:w-2xl">
-        <h1 className="text-2xl font-bold">📅 Day 18 — MongoDB Setup </h1>
+        <h1 className="text-2xl font-bold text-center">📅 Day 18 — MongoDB Setup </h1>
         <p>📚 Learn: Why Mongoose?</p>
         <ul>
           <li>
@@ -22,6 +22,7 @@ const Demo4 = () => {
           </li>
         </ul>
         <ul>
+          <br />
           <p className="font-bold">🛠 Practice: Step-by-Step Setup</p>
           <li>Step 1: Install Mongoose</li>
           <li>Step 2: Add your Connection String</li>
