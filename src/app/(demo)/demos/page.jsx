@@ -72,8 +72,8 @@ const demo = () => {
           ))}
         </ul>
 
-        <div className="w-full bg-amber-300">
-          <button className="bg-teal-500 px-2 py-1 rounded hover:bg-teal-700">
+        <div>
+          <button className="text-2xl bg-teal-500 px-10 py-2 rounded hover:bg-teal-700 ">
             <Link
               href={"/"}
               className="flex justify-center items-center gap-2 uppercase"

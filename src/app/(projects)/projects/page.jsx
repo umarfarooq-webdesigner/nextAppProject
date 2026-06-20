@@ -72,7 +72,7 @@ const project = () => {
           ))}
         </ul>
         <div>
-          <button className="bg-teal-500 px-2 py-1 rounded hover:bg-teal-700">
+          <button className="text-2xl bg-teal-500 px-10 py-2 rounded hover:bg-teal-700 ">
             <Link
               href={"/"}
               className="flex justify-center items-center gap-2 uppercase"
