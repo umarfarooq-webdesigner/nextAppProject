@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Demo4 = () => {
   return (
-    <div className="grid justify-center items-center mt-10">
+    <div className="grid justify-center items-center mt-10 px-10">
       <div className="flex flex-col justify-center items-center w-full lg:w-2xl">
         <h1 className="text-2xl font-bold">📅 Day 18 — MongoDB Setup </h1>
         <p>📚 Learn: Why Mongoose?</p>
