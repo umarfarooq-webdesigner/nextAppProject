@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Home() {
   const text = "WELCOME TO HOME";
@@ -24,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full min-h-screen grid justify-center items-center text-center bg-zinc-950 perspective-1000 overflow-hidden">
+    <div className="w-full min-h-screen grid justify-center items-center text-center bg-zinc-950 perspective-1000 overflow-hidden px-10">
       <h1 className="group flex flex-wrap justify-center text-5xl font-black text-white uppercase tracking-wider cursor-pointer select-none preserve-3d max-w-4xl gap-x-4">
         {text.split("").map((char, index) => {
           if (char === " ") return <span key={index} className="w-6" />;
@@ -79,6 +80,19 @@ export default function Home() {
           text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
         }
       `}</style>
+      <div className="flex gap-4 justify-center [perspective:1000px]">
+        <button className="group relative text-white border border-white px-6 py-3 rounded font-bold text-xl transition-all duration-300 ease-out [transform-style:preserve-3d] hover:[transform:translateZ(20px)_rotateX(10deg)] hover:bg-white hover:text-black hover:shadow-[0_15px_30px_rgba(255,255,255,0.2)]">
+          <Link href={"/demos"} className="block w-full h-full">
+            Demo's
+          </Link>
+        </button>
+
+        <button className="group relative text-white border border-white px-6 py-3 rounded font-bold text-xl transition-all duration-300 ease-out [transform-style:preserve-3d] hover:[transform:translateZ(20px)_rotateX(10deg)] hover:bg-white hover:text-black hover:shadow-[0_15px_30px_rgba(255,255,255,0.2)]">
+          <Link href={"/projects"} className="block w-full h-full">
+            Project's
+          </Link>
+        </button>
+      </div>
     </div>
   );
 }
