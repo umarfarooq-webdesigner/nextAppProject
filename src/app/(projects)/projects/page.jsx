@@ -61,7 +61,7 @@ const project = () => {
   return (
     <>
       <div className="w-full min-h-screen grid justify-center items-center text-center px-10 bg-black text-white">
-        <ul className="grid grid-cols-6 gap-4 ">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 ">
           {projectLinks.map(({ label, path }) => (
             <li
               key={label}
