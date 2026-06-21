@@ -5,9 +5,11 @@ import Link from "next/link";
 
 const Demo4 = () => {
   return (
-    <div className="grid justify-center items-center mt-10 px-10">
+    <div className="grid justify-center items-center my-10 px-10">
       <div className="flex flex-col justify-center items-center w-full lg:w-2xl">
-        <h1 className="text-2xl font-bold text-center">📅 Day 18 — MongoDB Setup </h1>
+        <h1 className="text-2xl font-bold text-center">
+          📅 Day 18 — MongoDB Setup{" "}
+        </h1>
         <p>📚 Learn: Why Mongoose?</p>
         <ul>
           <li>
@@ -32,9 +34,15 @@ const Demo4 = () => {
 
         <div className="mt-10">
           <p className=" capitalize font-bold">Click on the Links</p>
-          <ul>
-            <li className="hover:underline">
+          <ul className="flex flex-col gap-2">
+            <li className="text-center bg-sky-300 hover:bg-sky-400 cursor-pointer">
               <Link href={"/demo4/users"}>Users</Link>
+            </li>
+            <li className="text-center bg-sky-300 hover:bg-sky-400 cursor-pointer">
+              <Link href={"/demo4/students"}>Students</Link>
+            </li>
+            <li className="text-center bg-sky-300 hover:bg-sky-400 cursor-pointer">
+              <Link href={"/demo4/books"}>Books</Link>
             </li>
           </ul>
         </div>
