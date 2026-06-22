@@ -17,7 +17,7 @@ export default function BookListClient({ books }) {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-10 py-6">
-        {books.map((book) => (
+        {books?.map((book) => (
           <div
             key={book._id}
             className="border border-gray-200 bg-white shadow-sm p-5 rounded-xl flex flex-col justify-between hover:shadow-md transition"
