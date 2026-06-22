@@ -32,6 +32,29 @@ export default function BookListClient({ books }) {
         Books Data
       </h1>
 
+      {/* Tabs Navigation for Pages */}
+      {totalPages > 1 && (
+        <div className="flex flex-wrap justify-center items-center gap-2 px-10 mb-4 border-b border-gray-200 pb-4">
+          {Array.from({ length: totalPages }, (_, index) => {
+            const pageNum = index + 1;
+            const isActive = currentPage === pageNum;
+            return (
+              <button
+                key={pageNum}
+                onClick={() => handlePageChange(pageNum)}
+                className={`px-4 py-2 text-sm font-semibold rounded-lg border transition ${
+                  isActive
+                    ? "bg-amber-500 text-white border-amber-500 shadow-sm"
+                    : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:text-gray-800"
+                }`}
+              >
+                Page {pageNum}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       {/* Grid List */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-10 py-6">
         {currentBooks.map((book) => (
@@ -83,7 +106,7 @@ export default function BookListClient({ books }) {
         ))}
       </div>
 
-      {/* Pagination Controls */}
+      {/* Pagination Controls Footer */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-4 mt-4 mb-10">
           <button
